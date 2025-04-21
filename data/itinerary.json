@@ -1,0 +1,339 @@
+{
+  "end_date": "2025-07-07",
+  "days": [
+    {
+      "day_number": 1,
+      "events": [
+        {
+          "end_time": "09:30",
+          "price": "",
+          "description": "Travel to Bengaluru Airport",
+          "booking_required": false,
+          "start_time": "07:30",
+          "event_type": "visit",
+          "address": "Kempegowda International Airport Bengaluru"
+        },
+        {
+          "event_type": "flight",
+          "boarding_time": "09:45",
+          "booking_id": "",
+          "flight_number": "NH816",
+          "booking_required": true,
+          "departure_time": "10:30",
+          "seat_number": "window",
+          "price": "1250",
+          "arrival_airport": "NRT",
+          "description": "Flight from Bengaluru to Tokyo",
+          "arrival_time": "00:30",
+          "departure_airport": "BLR"
+        }
+      ],
+      "date": "2025-06-27"
+    },
+    {
+      "events": [
+        {
+          "event_type": "hotel",
+          "booking_id": "",
+          "check_in_time": "15:00",
+          "booking_required": true,
+          "room_selection": "standard room",
+          "check_out_time": "12:00",
+          "price": "2800",
+          "description": "Check into Hilton Tokyo",
+          "address": "6-6-2 Nishi-Shinjuku, Shinjuku-Ku, Tokyo, 160-0023, Japan"
+        },
+        {
+          "address": "11 Naitomachi, Shinjuku City, Tokyo 160-0014, Japan",
+          "start_time": "16:00",
+          "booking_required": false,
+          "event_type": "visit",
+          "end_time": "19:00",
+          "description": "Explore Shinjuku Gyoen National Garden",
+          "price": ""
+        },
+        {
+          "start_time": "20:00",
+          "event_type": "visit",
+          "end_time": "22:00",
+          "address": "Shinjuku, Tokyo",
+          "description": "Dinner in Shinjuku",
+          "booking_required": false,
+          "price": ""
+        }
+      ],
+      "day_number": 2,
+      "date": "2025-06-28"
+    },
+    {
+      "date": "2025-06-29",
+      "events": [
+        {
+          "address": "4-16-2 Tsukiji, Chuo, Tokyo 104-0045, Japan",
+          "booking_required": false,
+          "description": "Visit Tsukiji Outer Market for Food",
+          "end_time": "12:00",
+          "start_time": "09:00",
+          "price": "",
+          "event_type": "visit"
+        },
+        {
+          "price": "",
+          "booking_required": false,
+          "start_time": "14:00",
+          "event_type": "visit",
+          "end_time": "17:00",
+          "description": "Explore Ginza district",
+          "address": "Ginza, Chuo, Tokyo, Japan"
+        },
+        {
+          "description": "Dinner in Ginza",
+          "start_time": "19:00",
+          "price": "",
+          "event_type": "visit",
+          "booking_required": false,
+          "address": "Ginza, Tokyo",
+          "end_time": "21:00"
+        }
+      ],
+      "day_number": 3
+    },
+    {
+      "day_number": 4,
+      "events": [
+        {
+          "price": "",
+          "start_time": "09:00",
+          "description": "Visit Sens\u014d-ji Temple",
+          "end_time": "11:00",
+          "address": "2 Chome-3-1 Asakusa, Taito City, Tokyo 111-0032, Japan",
+          "event_type": "visit",
+          "booking_required": false
+        },
+        {
+          "address": "Asakusa, Taito, Tokyo, Japan",
+          "event_type": "visit",
+          "booking_required": false,
+          "end_time": "13:00",
+          "start_time": "11:00",
+          "description": "Explore Asakusa district",
+          "price": ""
+        },
+        {
+          "booking_required": false,
+          "address": "13-9 Uenokoen, Taito City, Tokyo 110-8712, Japan",
+          "event_type": "visit",
+          "price": "",
+          "description": "Tokyo National Museum",
+          "end_time": "17:00",
+          "start_time": "14:00"
+        },
+        {
+          "booking_required": false,
+          "address": "Asakusa, Tokyo",
+          "end_time": "21:00",
+          "description": "Dinner in Asakusa",
+          "price": "",
+          "start_time": "19:00",
+          "event_type": "visit"
+        }
+      ],
+      "date": "2025-06-30"
+    },
+    {
+      "day_number": 5,
+      "events": [
+        {
+          "booking_required": false,
+          "address": "Hakone, Kanagawa Prefecture, Japan",
+          "description": "Day trip to Hakone",
+          "start_time": "09:00",
+          "event_type": "visit",
+          "end_time": "18:00",
+          "price": ""
+        },
+        {
+          "end_time": "21:00",
+          "address": "Hakone, Tokyo",
+          "description": "Dinner near Hakone",
+          "start_time": "19:00",
+          "booking_required": false,
+          "event_type": "visit",
+          "price": ""
+        }
+      ],
+      "date": "2025-07-01"
+    },
+    {
+      "events": [
+        {
+          "start_time": "10:00",
+          "event_type": "visit",
+          "booking_required": false,
+          "price": "",
+          "address": "2 Chome-1 Dogenzaka, Shibuya City, Tokyo 150-0043, Japan",
+          "description": "Shibuya Crossing and Hachiko Statue",
+          "end_time": "12:00"
+        },
+        {
+          "booking_required": false,
+          "event_type": "visit",
+          "address": "Shibuya, Tokyo",
+          "start_time": "12:00",
+          "end_time": "14:00",
+          "price": "",
+          "description": "Explore Shibuya"
+        },
+        {
+          "booking_required": false,
+          "end_time": "21:00",
+          "event_type": "visit",
+          "start_time": "19:00",
+          "price": "",
+          "description": "Dinner in Shibuya",
+          "address": "Shibuya, Tokyo"
+        }
+      ],
+      "date": "2025-07-02",
+      "day_number": 6
+    },
+    {
+      "date": "2025-07-03",
+      "day_number": 7,
+      "events": [
+        {
+          "start_time": "10:00",
+          "price": "",
+          "booking_required": false,
+          "event_type": "visit",
+          "description": "Imperial Palace East Garden",
+          "address": "1-1 Chiyoda, Chiyoda City, Tokyo 100-8111, Japan",
+          "end_time": "13:00"
+        },
+        {
+          "booking_required": false,
+          "start_time": "14:00",
+          "description": "Yasukuni Shrine",
+          "address": "3-1-1 Kudankita, Chiyoda City, Tokyo 102-8246, Japan",
+          "event_type": "visit",
+          "end_time": "16:00",
+          "price": ""
+        },
+        {
+          "event_type": "visit",
+          "price": "",
+          "description": "Dinner near Imperial Palace",
+          "end_time": "21:00",
+          "address": "Chiyoda, Tokyo",
+          "start_time": "19:00",
+          "booking_required": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-04",
+      "day_number": 8,
+      "events": [
+        {
+          "end_time": "13:00",
+          "event_type": "visit",
+          "price": "",
+          "address": "1-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013, Japan",
+          "description": "Ghibli Museum (book in advance)",
+          "booking_required": true,
+          "start_time": "10:00"
+        },
+        {
+          "end_time": "17:00",
+          "price": "",
+          "start_time": "14:00",
+          "booking_required": false,
+          "address": "1-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013, Japan",
+          "description": "Inokashira Park",
+          "event_type": "visit"
+        },
+        {
+          "start_time": "19:00",
+          "price": "",
+          "address": "Mitaka, Tokyo",
+          "event_type": "visit",
+          "booking_required": false,
+          "end_time": "21:00",
+          "description": "Dinner in Mitaka"
+        }
+      ]
+    },
+    {
+      "date": "2025-07-05",
+      "day_number": 9,
+      "events": [
+        {
+          "price": "",
+          "event_type": "visit",
+          "address": "Tokyo",
+          "end_time": "20:00",
+          "description": "Free day for shopping and exploring",
+          "booking_required": false,
+          "start_time": "10:00"
+        },
+        {
+          "price": "",
+          "booking_required": false,
+          "address": "Tokyo",
+          "description": "Farewell Dinner",
+          "event_type": "visit",
+          "end_time": "22:00",
+          "start_time": "20:00"
+        }
+      ]
+    },
+    {
+      "day_number": 10,
+      "date": "2025-07-06",
+      "events": [
+        {
+          "end_time": "13:00",
+          "price": "",
+          "address": "Narita International Airport",
+          "booking_required": false,
+          "description": "Travel to Narita Airport",
+          "start_time": "10:00",
+          "event_type": "visit"
+        },
+        {
+          "description": "Return Flight from Tokyo to Bengaluru",
+          "departure_time": "14:00",
+          "boarding_time": "13:15",
+          "event_type": "flight",
+          "arrival_airport": "BLR",
+          "booking_id": "",
+          "price": "950",
+          "arrival_time": "09:30",
+          "booking_required": true,
+          "flight_number": "AI311",
+          "departure_airport": "NRT",
+          "seat_number": "window"
+        }
+      ]
+    },
+    {
+      "day_number": 11,
+      "date": "2025-07-07",
+      "events": [
+        {
+          "address": "Bengaluru",
+          "start_time": "09:30",
+          "price": "",
+          "event_type": "visit",
+          "description": "Arrive Home",
+          "end_time": "10:30",
+          "booking_required": false
+        }
+      ]
+    }
+  ],
+  "origin": "Bengaluru",
+  "destination": "Tokyo, Japan",
+  "start_date": "2025-06-27",
+  "trip_name": "Tokyo Adventure"
+}

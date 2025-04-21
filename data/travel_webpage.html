@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Adventure - Your Travel Guide</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+        }
+        li:hover {
+            background-color: #f2f2f2;
+        }
+        p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .event-time {
+            font-style: italic;
+            color: #777;
+        }
+        .event-address {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Emoji styles for sections */
+        .flight::before { content: '🛫 '; }
+        .hotel::before { content: '🏨 '; }
+        .visit::before { content: '🗺️ '; }
+        .flight, .hotel, .visit {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tokyo Adventure</h1>
+
+        <h2>Day 1: 2025-06-27</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Travel to Bengaluru Airport</p>
+                <p class="event-time">Time: 07:30 - 09:30</p>
+                <p class="event-address">Address: Kempegowda International Airport Bengaluru</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="flight">Flight: Flight from Bengaluru to Tokyo</p>
+                <p class="event-time">Time: 10:30 (Departure), 00:30 (Arrival)</p>
+                <p>Flight Number: NH816</p>
+                <p>Departure Airport: BLR, Arrival Airport: NRT</p>
+                <p>Price: 1250</p>
+                <p>Seat Number: window</p>
+                <p>Boarding Time: 09:45</p>
+                <p>Booking Required: Yes</p>
+            </li>
+        </ul>
+
+        <h2>Day 2: 2025-06-28</h2>
+        <ul>
+            <li>
+                <p class="hotel">Hotel: Check into Hilton Tokyo</p>
+                <p>Check-in Time: 15:00, Check-out Time: 12:00</p>
+                <p class="event-address">Address: 6-6-2 Nishi-Shinjuku, Shinjuku-Ku, Tokyo, 160-0023, Japan</p>
+                <p>Room Selection: standard room</p>
+                <p>Price: 2800</p>
+                <p>Booking Required: Yes</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Explore Shinjuku Gyoen National Garden</p>
+                <p class="event-time">Time: 16:00 - 19:00</p>
+                <p class="event-address">Address: 11 Naitomachi, Shinjuku City, Tokyo 160-0014, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Dinner in Shinjuku</p>
+                <p class="event-time">Time: 20:00 - 22:00</p>
+                <p class="event-address">Address: Shinjuku, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 3: 2025-06-29</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Visit Tsukiji Outer Market for Food</p>
+                <p class="event-time">Time: 09:00 - 12:00</p>
+                <p class="event-address">Address: 4-16-2 Tsukiji, Chuo, Tokyo 104-0045, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Explore Ginza district</p>
+                <p class="event-time">Time: 14:00 - 17:00</p>
+                <p class="event-address">Address: Ginza, Chuo, Tokyo, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Dinner in Ginza</p>
+                <p class="event-time">Time: 19:00 - 21:00</p>
+                <p class="event-address">Address: Ginza, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 4: 2025-06-30</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Visit Sensō-ji Temple</p>
+                <p class="event-time">Time: 09:00 - 11:00</p>
+                <p class="event-address">Address: 2 Chome-3-1 Asakusa, Taito City, Tokyo 111-0032, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Explore Asakusa district</p>
+                <p class="event-time">Time: 11:00 - 13:00</p>
+                <p class="event-address">Address: Asakusa, Taito, Tokyo, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Tokyo National Museum</p>
+                <p class="event-time">Time: 14:00 - 17:00</p>
+                <p class="event-address">Address: 13-9 Uenokoen, Taito City, Tokyo 110-8712, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Dinner in Asakusa</p>
+                <p class="event-time">Time: 19:00 - 21:00</p>
+                <p class="event-address">Address: Asakusa, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 5: 2025-07-01</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Day trip to Hakone</p>
+                <p class="event-time">Time: 09:00 - 18:00</p>
+                <p class="event-address">Address: Hakone, Kanagawa Prefecture, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Dinner near Hakone</p>
+                <p class="event-time">Time: 19:00 - 21:00</p>
+                <p class="event-address">Address: Hakone, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 6: 2025-07-02</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Shibuya Crossing and Hachiko Statue</p>
+                <p class="event-time">Time: 10:00 - 12:00</p>
+                <p class="event-address">Address: 2 Chome-1 Dogenzaka, Shibuya City, Tokyo 150-0043, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Explore Shibuya</p>
+                <p class="event-time">Time: 12:00 - 14:00</p>
+                <p class="event-address">Address: Shibuya, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Dinner in Shibuya</p>
+                <p class="event-time">Time: 19:00 - 21:00</p>
+                <p class="event-address">Address: Shibuya, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 7: 2025-07-03</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Imperial Palace East Garden</p>
+                <p class="event-time">Time: 10:00 - 13:00</p>
+                <p class="event-address">Address: 1-1 Chiyoda, Chiyoda City, Tokyo 100-8111, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Yasukuni Shrine</p>
+                <p class="event-time">Time: 14:00 - 16:00</p>
+                <p class="event-address">Address: 3-1-1 Kudankita, Chiyoda City, Tokyo 102-8246, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Dinner near Imperial Palace</p>
+                <p class="event-time">Time: 19:00 - 21:00</p>
+                <p class="event-address">Address: Chiyoda, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 8: 2025-07-04</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Ghibli Museum (book in advance)</p>
+                <p class="event-time">Time: 10:00 - 13:00</p>
+                <p class="event-address">Address: 1-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013, Japan</p>
+                <p>Booking Required: Yes</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Inokashira Park</p>
+                <p class="event-time">Time: 14:00 - 17:00</p>
+                <p class="event-address">Address: 1-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013, Japan</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Dinner in Mitaka</p>
+                <p class="event-time">Time: 19:00 - 21:00</p>
+                <p class="event-address">Address: Mitaka, Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 9: 2025-07-05</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Free day for shopping and exploring</p>
+                <p class="event-time">Time: 10:00 - 20:00</p>
+                <p class="event-address">Address: Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="visit">Visit: Farewell Dinner</p>
+                <p class="event-time">Time: 20:00 - 22:00</p>
+                <p class="event-address">Address: Tokyo</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+
+        <h2>Day 10: 2025-07-06</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Travel to Narita Airport</p>
+                <p class="event-time">Time: 10:00 - 13:00</p>
+                <p class="event-address">Address: Narita International Airport</p>
+                <p>Booking Required: No</p>
+            </li>
+            <li>
+                <p class="flight">Flight: Return Flight from Tokyo to Bengaluru</p>
+                <p class="event-time">Time: 14:00 (Departure), 09:30 (Arrival)</p>
+                <p>Flight Number: AI311</p>
+                <p>Departure Airport: NRT, Arrival Airport: BLR</p>
+                <p>Price: 950</p>
+                <p>Seat Number: window</p>
+                <p>Boarding Time: 13:15</p>
+                <p>Booking Required: Yes</p>
+            </li>
+        </ul>
+
+        <h2>Day 11: 2025-07-07</h2>
+        <ul>
+            <li>
+                <p class="visit">Visit: Arrive Home</p>
+                <p class="event-time">Time: 09:30 - 10:30</p>
+                <p class="event-address">Address: Bengaluru</p>
+                <p>Booking Required: No</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

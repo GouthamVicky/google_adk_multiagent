@@ -1,4 +1,4 @@
-# ✈️ Voyager: AI-Powered Travel Concierge Agent
+# ✈️ Voyager: Multi Agentic Travel Assistant
 
 **Voyager** is a multi-agent travel assistant built using the [Google Agent Development Kit (ADK)](https://cloud.google.com/vertex-ai/docs/agents/overview). It helps users **plan, book, and manage trips** using specialized AI agents for each task—such as flight tracking, itinerary creation, hotel search, and travel inspiration.
 
@@ -24,7 +24,7 @@ The **Root Agent** routes user requests to appropriate sub-agents based on inten
 |----------------------------------|------------------------|
 | Vacation inspiration, ideas      | `trip_advisor_agent`   |
 | Trip planning or itinerary help  | `planning_agent`       |
-| Create  customized travel guide  | `travel_guide`         |
+| Create customized travel webpage | `travel_guide`         |
 | Flight booking, seat selection   | `flight_agent`         |
 | Hotels, Airbnb, accommodations   | `hotel_agent`          |
 | Booking confirmation, payments   | `booking_agent`        |

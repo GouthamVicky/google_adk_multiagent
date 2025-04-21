@@ -1,0 +1,160 @@
+# ✈️ Voyager: AI-Powered Travel Concierge Agent
+
+**Voyager** is a multi-agent travel assistant built using the [Google Agent Development Kit (ADK)](https://cloud.google.com/vertex-ai/docs/agents/overview). It helps users **plan, book, and manage trips** using specialized AI agents for each task—such as flight tracking, itinerary creation, hotel search, and travel inspiration.
+
+---
+
+## 🌍 Features
+
+- 🧭 **Trip Advisor Agent**: Discover vacation ideas, destination recommendations, and activities.
+- 🗺️ **Planning Agent**: Build day-wise personalized itineraries and generate stylish HTML travel guides.
+- 🏨 **Hotel Agent**: Search hotels and select rooms with ease.
+- 🛫 **Flight Agent**: Search and track real-time flights using Google Search.
+- 💳 **Booking Agent**: Handle booking finalization and secure payment flows.
+- 📄 **Travel Guide Designer**: Converts itineraries into modern travel web pages (HTML format).
+- 🔐 Modular & composable using Google ADK's `Agent`, `Tool`, and `FunctionTool` APIs.
+
+---
+
+## 🧠 Root Agent Delegation
+
+The **Root Agent** routes user requests to appropriate sub-agents based on intent:
+
+| User Intent                       | Delegated To          |
+|----------------------------------|------------------------|
+| Vacation inspiration, ideas      | `trip_advisor_agent`   |
+| Trip planning or itinerary help  | `planning_agent`       |
+| Create  customized travel guide  | `travel_guide`         |
+| Flight booking, seat selection   | `flight_agent`         |
+| Hotels, Airbnb, accommodations   | `hotel_agent`          |
+| Booking confirmation, payments   | `booking_agent`        |
+
+---
+
+## 🧩 Agent Overview
+
+### 🧳 Trip Advisor Agent
+
+- **Name**: `trip_advisor_agent`
+- **Description**: Suggests destinations, things to do, and local experiences.
+- **Sub-Agents**:
+  - `place_agent`: Recommends destinations based on preferences
+  - `explorer_agent`: Suggests POIs and activities
+
+---
+
+### 🧠 Planning Agent
+
+- **Name**: `planning_agent`
+- **Description**: Plans full trips including flights, hotels, and itinerary.
+- **Tools**:
+  - `flight_agent`, `hotel_agent`, `itinerary_agent`
+  - `travel_guide_designer_agent`, `create_travel_website`
+  - `memorize`, `save_itinerary_artifact`
+
+---
+
+### 📅 Itinerary Agent
+
+- **Name**: `itinerary_agent`
+- **Description**: Generates a structured JSON representation of a trip plan.
+- **Output Schema**: `types.Itinerary`
+
+---
+
+### ✈️ Flight Agent
+
+- **Name**: `flight_agent`
+- **Description**: Searches and tracks flights using Google Search.
+- **Tools**: `google_search`
+
+---
+
+### 🏨 Hotel Agent
+
+- **Name**: `hotel_agent`
+- **Description**: Searches for hotels and helps with room selection.
+- **Output Schema**: `types.HotelsSelection`
+
+---
+
+### 💳 Booking Agent
+
+- **Name**: `booking_agent`
+- **Description**: Finalizes bookings by interacting with payment sub-agents.
+- **Sub-Agents**:
+  - `payment_choice`: Shows available payment methods
+  - `process_payment`: Processes the chosen method
+
+---
+
+### 🖼️ Travel Guide Designer Agent
+
+- **Name**: `travel_guide_designer_agent`
+- **Description**: Creates and saves a modern HTML file from the itinerary.
+- **Output Key**: `itinerary_design_html`
+- **File Output**: `/voyager_travel_agent/data/generated_itinerary.html`
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Google Agent Development Kit (ADK)
+- **Model**: Gemini 2.0 Flash
+- **Architecture**: Multi-agent orchestration with tool delegation
+- **Tooling**: Google Search, File I/O, Artifact Storage, Custom HTML generators
+
+---
+### Installation
+
+1.  Clone the repository:
+
+    ```bash
+    git clone https://github.com/GouthamVicky/google_adk_multiagent
+    cd google_adk_multiagent
+    ```
+2. Set up Google Cloud credentials:
+
+    Otherwise:
+    - Set the following environment variables.
+    - To use Vertex, make sure you have the Vertex AI API enabled in your project.
+    ```
+    # Choose Model Backend: 0 -> ML Dev, 1 -> Vertex
+    GOOGLE_GENAI_USE_VERTEXAI=1
+    # ML Dev backend config, when GOOGLE_GENAI_USE_VERTEXAI=0, ignore if using Vertex.
+    # GOOGLE_API_KEY=YOUR_VALUE_HERE
+
+    # Vertex backend config
+    GOOGLE_CLOUD_PROJECT=__YOUR_CLOUD_PROJECT_ID__
+    GOOGLE_CLOUD_LOCATION=us-central1
+
+    # Places API
+    GOOGLE_PLACES_API_KEY=__YOUR_API_KEY_HERE__
+
+    # Sample Scenario Path - Default is an empty itinerary
+    # This will be loaded upon first user interaction.
+    #
+    # Uncomment one of the two, or create your own.
+    #
+    # TRAVEL_CONCIERGE_SCENARIO=eval/itinerary_seattle_example.json
+    TRAVEL_CONCIERGE_SCENARIO=eval/itinerary_empty_default.json
+    ```
+3. Authenticate your GCloud account.
+    ```bash
+    gcloud auth application-default login
+    ```
+4. Install requirements from requirements.txt file
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Running the Agent
+
+### Using `adk`
+
+```bash
+# Under the voyager-travel-agent directory:
+adk web
+```
+
+

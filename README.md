@@ -184,9 +184,9 @@ Here is a walkthrough video of the project:
 ## Future Enhancements
 1. Integration of Model Context Protocol (MCP) Server Support
 We aim to enhance our system by integrating support for the Model Context Protocol (MCP). MCP is an open standard that enables secure, two-way connections between AI models and external data sources or tools. By implementing MCP server support, our agents will be able to dynamically discover and utilize various tools and resources, facilitating more efficient and context-aware interactions. 
-Home
+[Model Context Protocol](https://www.anthropic.com/news/model-context-protocol?utm_source=chatgpt.com)
 ​
 
 2. Development of an Agent-to-Agent (A2A) Communication Protocol
 To enable seamless collaboration among multiple agents, we plan to develop an Agent-to-Agent (A2A) communication protocol. This protocol will allow agents to discover each other's capabilities, exchange information, and collaborate on tasks, regardless of their underlying frameworks or vendors. By establishing a standardized communication framework, we aim to enhance interoperability and enable more complex multi-agent workflows. 
-Google Developers Blog
+[Agents to agents communnication](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/?utm_source=chatgpt.com)

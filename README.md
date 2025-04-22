@@ -178,6 +178,6 @@ Plan a trip to Japan on this year august month. Pick any flights and any seats; 
 
 Here is a walkthrough video of the project:
 
-[![Watch the video](https://cdn.loom.com/sessions/thumbnails/your-thumbnail-id-here.png)](https://www.loom.com/share/dce4778409b44eb6a2b339fe5aaadc43?sid=9c25b1dc-6a2e-4b92-bea5-d4654605dcc7)
+[![Watch the video](https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/4dc8b4153925131.633efa9b268a9.jpg)](https://www.loom.com/share/dce4778409b44eb6a2b339fe5aaadc43?sid=9c25b1dc-6a2e-4b92-bea5-d4654605dcc7)
 
 Click the image above to watch the video.

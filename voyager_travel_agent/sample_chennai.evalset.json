@@ -1,0 +1,963 @@
+[
+  {
+    "name": "chennai_initial_test",
+    "data": [
+      {
+        "query": "suggest me some tourist places in chennai",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "trip_advisor_agent"
+            }
+          },
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "tourist places in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Chennai offers a diverse range of attractions! You could visit Marina Beach, Fort St. George, Kapaleeshwarar Temple, Government Museum Chennai, and San Thome Basilica.\n\nAre any of these places particularly interesting to you? Or would you like me to suggest activities around Chennai?\n"
+      }
+    ],
+    "initial_session": {
+      "state": {
+        "user_profile": "",
+        "_time": "",
+        "origin": "",
+        "destination": "",
+        "start_date": "",
+        "end_date": "",
+        "itinerary": "",
+        "outbound_flight_selection": "",
+        "outbound_seat_number": "",
+        "return_flight_selection": "",
+        "return_seat_number": "",
+        "hotel_selection": "",
+        "room_selection": "",
+        "poi": "",
+        "itinerary_start_date": "",
+        "itinerary_end_date": "",
+        "itinerary_datetime": ""
+      },
+      "app_name": "voyager_travel_agent",
+      "user_id": "user"
+    }
+  },
+  {
+    "name": "chennai_test_2",
+    "data": [
+      {
+        "query": "suggest me some tourist places in chennai",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "trip_advisor_agent"
+            }
+          },
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "tourist places in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Chennai offers a diverse range of attractions! You could visit Marina Beach, Fort St. George, Kapaleeshwarar Temple, Government Museum Chennai, and San Thome Basilica.\n\nAre any of these places particularly interesting to you? Or would you like me to suggest activities around Chennai?\n"
+      },
+      {
+        "query": "yes please suggest few activities around chennai ",
+        "expected_tool_use": [
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "activities around Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "In Chennai, you could visit Marina Beach for sunrise views and local food, explore Fort St. George to see British colonial architecture, visit Government Museum Chennai, visit Kapaleeshwarar Temple, and visit San Thome Basilica\n\nAre any of these places particularly interesting to you?\n"
+      }
+    ],
+    "initial_session": {
+      "state": {
+        "user_profile": "",
+        "_time": "",
+        "origin": "",
+        "destination": "",
+        "start_date": "",
+        "end_date": "",
+        "itinerary": "",
+        "outbound_flight_selection": "",
+        "outbound_seat_number": "",
+        "return_flight_selection": "",
+        "return_seat_number": "",
+        "hotel_selection": "",
+        "room_selection": "",
+        "poi": "",
+        "itinerary_start_date": "",
+        "itinerary_end_date": "",
+        "itinerary_datetime": ""
+      },
+      "app_name": "voyager_travel_agent",
+      "user_id": "user"
+    }
+  },
+  {
+    "name": "chennai_flight_agent_test",
+    "data": [
+      {
+        "query": "suggest me some tourist places in chennai",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "trip_advisor_agent"
+            }
+          },
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "tourist places in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Chennai offers a diverse range of attractions! You could visit Marina Beach, Fort St. George, Kapaleeshwarar Temple, Government Museum Chennai, and San Thome Basilica.\n\nAre any of these places particularly interesting to you? Or would you like me to suggest activities around Chennai?\n"
+      },
+      {
+        "query": "yes please suggest few activities around chennai ",
+        "expected_tool_use": [
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "activities around Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "In Chennai, you could visit Marina Beach for sunrise views and local food, explore Fort St. George to see British colonial architecture, visit Government Museum Chennai, visit Kapaleeshwarar Temple, and visit San Thome Basilica\n\nAre any of these places particularly interesting to you?\n"
+      },
+      {
+        "query": "no create a 3 days weekend itinerary covering this places",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "planning_agent"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "trip_advisor_agent",
+            "text": "I am designed to provide destination and activity suggestions, and not designed to create a full itinerary. I can transfer you to the planning agent who can help you with that.\n"
+          }
+        ],
+        "reference": "Okay, I can help you create a 3-day weekend itinerary covering Marina Beach, Fort St. George, Government Museum Chennai, Kapaleeshwarar Temple, and San Thome Basilica.\n\nFirst, I need to know the start date of your trip. Also, where are you traveling from?\n"
+      },
+      {
+        "query": "start date is august 15th and i am travelling from coimbatore",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "origin",
+              "value": "Coimbatore"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "destination",
+              "value": "Chennai"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "start_date",
+              "value": "2025-08-15"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "2025-08-17",
+              "key": "end_date"
+            }
+          },
+          {
+            "tool_name": "flight_agent",
+            "tool_input": {
+              "request": "Find flights from Coimbatore to Chennai on 2025-08-15 and return on 2025-08-17"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, I will create a 3-day itinerary starting August 15th, 2025, for a trip from Coimbatore to Chennai, covering the places you mentioned: Marina Beach, Fort St. George, Government Museum Chennai, Kapaleeshwarar Temple, and San Thome Basilica.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Since it's a 3-day trip starting on August 15th, 2025, the end date would be August 17th, 2025.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now that I have the origin, destination, start date, and end date, I can start planning the flights and hotels.\n\n"
+          }
+        ],
+        "reference": "Okay, I have a few flight options for you.\n\n**Outbound (August 15th):**\n\n*   **IndiGo 6E-7697:** Coimbatore (CJB) 06:20 AM to Chennai (MAA) 07:35 AM, Price: $45\n*   **IndiGo 6E-7144:** Coimbatore (CJB) 18:40 PM to Chennai (MAA) 19:55 PM, Price: $45\n\n**Return (August 17th):**\n\n*   **IndiGo 6E-7144:** Chennai (MAA) 20:40 PM to Coimbatore (CJB) 21:55 PM, Price: $45\n*   **Air India AI-544:** Chennai (MAA) 19:15 PM to Coimbatore (CJB) 20:25 PM, Price: $52\n\nSince you have a seat preference for a window seat and a food preference for non-vegetarian, I will choose the IndiGo flights for both outbound and return. I will select the morning flight on August 15th and the evening flight on August 17th.\n\nDo you want to proceed with these flights?\n"
+      },
+      {
+        "query": "yes please proceed with these flights ",
+        "expected_tool_use": [
+          {
+            "tool_name": "flight_agent",
+            "tool_input": {
+              "request": "Select seat for IndiGo 6E-7697, departing from Coimbatore (CJB) at 06:20 AM on 2025-08-15"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "outbound_flight_selection",
+              "value": "{\"flight_number\": \"6E-7697\", \"departure\": {\"city_name\": \"Coimbatore\", \"airport_code\": \"CJB\", \"timestamp\": \"2025-08-15T06:20:00\"}, \"arrival\": {\"city_name\": \"Chennai\", \"airport_code\": \"MAA\", \"timestamp\": \"2025-08-15T07:35:00\"}, \"airlines\": [\"IndiGo\"], \"airline_logo\": \"/images/airplane.png\", \"price_in_usd\": 45, \"number_of_stops\": 0}"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "window",
+              "key": "outbound_seat_number"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "{\"flight_number\": \"6E-7144\", \"departure\": {\"city_name\": \"Chennai\", \"airport_code\": \"MAA\", \"timestamp\": \"2025-08-17T20:40:00\"}, \"arrival\": {\"city_name\": \"Coimbatore\", \"airport_code\": \"CJB\", \"timestamp\": \"2025-08-17T21:55:00\"}, \"airlines\": [\"IndiGo\"], \"airline_logo\": \"/images/airplane.png\", \"price_in_usd\": 45, \"number_of_stops\": 0}",
+              "key": "return_flight_selection"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "return_seat_number",
+              "value": "window"
+            }
+          },
+          {
+            "tool_name": "hotel_agent",
+            "tool_input": {
+              "request": "Find hotels in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, let's proceed with the IndiGo flights. First, I will select the outbound flight and then the seat.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "I am unable to select seats directly. However, considering your preference for a window seat, I will make a note to choose a window seat when booking the flight.\n\nI will save the outbound flight information.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now, let's save the return flight information.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now that we have the flights, let's find a hotel in Chennai.\n\n"
+          }
+        ],
+        "reference": "Here are a few hotel options in Chennai:\n\n*   **The Leela Palace Chennai:** Price: 12000\n*   **Taj Coromandel:** Price: 9500\n*   **ITC Grand Chola, a Luxury Collection Hotel, Chennai:** Price: 11000\n*   **Hyatt Regency Chennai:** Price: 7500\n\nGiven the activities you're interested in and considering a balance of luxury and value, I recommend the Taj Coromandel. It's centrally located and offers excellent service.\n\nDo you want to proceed with this hotel?\n"
+      }
+    ],
+    "initial_session": {
+      "state": {
+        "user_profile": "",
+        "_time": "",
+        "origin": "",
+        "destination": "",
+        "start_date": "",
+        "end_date": "",
+        "itinerary": "",
+        "outbound_flight_selection": "",
+        "outbound_seat_number": "",
+        "return_flight_selection": "",
+        "return_seat_number": "",
+        "hotel_selection": "",
+        "room_selection": "",
+        "poi": "",
+        "itinerary_start_date": "",
+        "itinerary_end_date": "",
+        "itinerary_datetime": ""
+      },
+      "app_name": "voyager_travel_agent",
+      "user_id": "user"
+    }
+  },
+  {
+    "name": "chennai_trip_itinerary_creation",
+    "data": [
+      {
+        "query": "suggest me some tourist places in chennai",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "trip_advisor_agent"
+            }
+          },
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "tourist places in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Chennai offers a diverse range of attractions! You could visit Marina Beach, Fort St. George, Kapaleeshwarar Temple, Government Museum Chennai, and San Thome Basilica.\n\nAre any of these places particularly interesting to you? Or would you like me to suggest activities around Chennai?\n"
+      },
+      {
+        "query": "yes please suggest few activities around chennai ",
+        "expected_tool_use": [
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "activities around Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "In Chennai, you could visit Marina Beach for sunrise views and local food, explore Fort St. George to see British colonial architecture, visit Government Museum Chennai, visit Kapaleeshwarar Temple, and visit San Thome Basilica\n\nAre any of these places particularly interesting to you?\n"
+      },
+      {
+        "query": "no create a 3 days weekend itinerary covering this places",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "planning_agent"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "trip_advisor_agent",
+            "text": "I am designed to provide destination and activity suggestions, and not designed to create a full itinerary. I can transfer you to the planning agent who can help you with that.\n"
+          }
+        ],
+        "reference": "Okay, I can help you create a 3-day weekend itinerary covering Marina Beach, Fort St. George, Government Museum Chennai, Kapaleeshwarar Temple, and San Thome Basilica.\n\nFirst, I need to know the start date of your trip. Also, where are you traveling from?\n"
+      },
+      {
+        "query": "start date is august 15th and i am travelling from coimbatore",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "origin",
+              "value": "Coimbatore"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "destination",
+              "value": "Chennai"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "start_date",
+              "value": "2025-08-15"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "2025-08-17",
+              "key": "end_date"
+            }
+          },
+          {
+            "tool_name": "flight_agent",
+            "tool_input": {
+              "request": "Find flights from Coimbatore to Chennai on 2025-08-15 and return on 2025-08-17"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, I will create a 3-day itinerary starting August 15th, 2025, for a trip from Coimbatore to Chennai, covering the places you mentioned: Marina Beach, Fort St. George, Government Museum Chennai, Kapaleeshwarar Temple, and San Thome Basilica.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Since it's a 3-day trip starting on August 15th, 2025, the end date would be August 17th, 2025.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now that I have the origin, destination, start date, and end date, I can start planning the flights and hotels.\n\n"
+          }
+        ],
+        "reference": "Okay, I have a few flight options for you.\n\n**Outbound (August 15th):**\n\n*   **IndiGo 6E-7697:** Coimbatore (CJB) 06:20 AM to Chennai (MAA) 07:35 AM, Price: $45\n*   **IndiGo 6E-7144:** Coimbatore (CJB) 18:40 PM to Chennai (MAA) 19:55 PM, Price: $45\n\n**Return (August 17th):**\n\n*   **IndiGo 6E-7144:** Chennai (MAA) 20:40 PM to Coimbatore (CJB) 21:55 PM, Price: $45\n*   **Air India AI-544:** Chennai (MAA) 19:15 PM to Coimbatore (CJB) 20:25 PM, Price: $52\n\nSince you have a seat preference for a window seat and a food preference for non-vegetarian, I will choose the IndiGo flights for both outbound and return. I will select the morning flight on August 15th and the evening flight on August 17th.\n\nDo you want to proceed with these flights?\n"
+      },
+      {
+        "query": "yes please proceed with these flights ",
+        "expected_tool_use": [
+          {
+            "tool_name": "flight_agent",
+            "tool_input": {
+              "request": "Select seat for IndiGo 6E-7697, departing from Coimbatore (CJB) at 06:20 AM on 2025-08-15"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "outbound_flight_selection",
+              "value": "{\"flight_number\": \"6E-7697\", \"departure\": {\"city_name\": \"Coimbatore\", \"airport_code\": \"CJB\", \"timestamp\": \"2025-08-15T06:20:00\"}, \"arrival\": {\"city_name\": \"Chennai\", \"airport_code\": \"MAA\", \"timestamp\": \"2025-08-15T07:35:00\"}, \"airlines\": [\"IndiGo\"], \"airline_logo\": \"/images/airplane.png\", \"price_in_usd\": 45, \"number_of_stops\": 0}"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "window",
+              "key": "outbound_seat_number"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "{\"flight_number\": \"6E-7144\", \"departure\": {\"city_name\": \"Chennai\", \"airport_code\": \"MAA\", \"timestamp\": \"2025-08-17T20:40:00\"}, \"arrival\": {\"city_name\": \"Coimbatore\", \"airport_code\": \"CJB\", \"timestamp\": \"2025-08-17T21:55:00\"}, \"airlines\": [\"IndiGo\"], \"airline_logo\": \"/images/airplane.png\", \"price_in_usd\": 45, \"number_of_stops\": 0}",
+              "key": "return_flight_selection"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "return_seat_number",
+              "value": "window"
+            }
+          },
+          {
+            "tool_name": "hotel_agent",
+            "tool_input": {
+              "request": "Find hotels in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, let's proceed with the IndiGo flights. First, I will select the outbound flight and then the seat.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "I am unable to select seats directly. However, considering your preference for a window seat, I will make a note to choose a window seat when booking the flight.\n\nI will save the outbound flight information.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now, let's save the return flight information.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now that we have the flights, let's find a hotel in Chennai.\n\n"
+          }
+        ],
+        "reference": "Here are a few hotel options in Chennai:\n\n*   **The Leela Palace Chennai:** Price: 12000\n*   **Taj Coromandel:** Price: 9500\n*   **ITC Grand Chola, a Luxury Collection Hotel, Chennai:** Price: 11000\n*   **Hyatt Regency Chennai:** Price: 7500\n\nGiven the activities you're interested in and considering a balance of luxury and value, I recommend the Taj Coromandel. It's centrally located and offers excellent service.\n\nDo you want to proceed with this hotel?\n"
+      },
+      {
+        "query": "yes proceed with this hotel",
+        "expected_tool_use": [
+          {
+            "tool_name": "hotel_agent",
+            "tool_input": {
+              "request": "Choose a room at Taj Coromandel"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "hotel_selection",
+              "value": "{\"address\": \"37, Mahatma Gandhi Rd, Nungambakkam, Chennai, Tamil Nadu 600034, India\", \"check_in_time\": \"14:00\", \"check_out_time\": \"12:00\", \"name\": \"Taj Coromandel\", \"price\": 9500, \"thumbnail\": \"/src/images/taj.png\"}"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "room_selection",
+              "value": "standard room"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, let's proceed with the Taj Coromandel. Now, let's choose a room.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "I am unable to select a specific room type. I will assume a standard room for the itinerary.\n\n"
+          }
+        ],
+        "reference": "Now that we have the flights and hotel, I can create a draft itinerary for your 3-day weekend trip to Chennai.\n\n**Day 1 (August 15th):**\n\n*   **Morning:** Depart from Coimbatore (CJB) at 06:20 AM, arrive in Chennai (MAA) at 07:35 AM (IndiGo 6E-7697).\n*   **Morning:** Travel from Chennai Airport to Taj Coromandel (approx. 30-45 minutes).\n*   **Afternoon:** Check in to Taj Coromandel (check-in time is 2:00 PM).\n*   **Afternoon:** Visit Fort St. George (historical fort and museum).\n*   **Evening:** Relax and have dinner at the hotel or a nearby restaurant.\n\n**Day 2 (August 16th):**\n\n*   **Morning:** Visit Kapaleeshwarar Temple (ancient Hindu temple).\n*   **Afternoon:** Visit Government Museum Chennai (archaeological finds and exhibits).\n*   **Evening:** Visit Marina Beach (enjoy the sunset and local food stalls).\n\n**Day 3 (August 17th):**\n\n*   **Morning:** Visit San Thome Basilica (Roman Catholic basilica).\n*   **Afternoon:** Shopping or explore other local attractions.\n*   **Evening:** Travel to Chennai Airport for your return flight.\n*   **Evening:** Depart from Chennai (MAA) at 20:40 PM, arrive in Coimbatore (CJB) at 21:55 PM (IndiGo 6E-7144).\n\nHow does this itinerary look to you?\n"
+      }
+    ],
+    "initial_session": {
+      "state": {
+        "user_profile": "",
+        "_time": "",
+        "origin": "",
+        "destination": "",
+        "start_date": "",
+        "end_date": "",
+        "itinerary": "",
+        "outbound_flight_selection": "",
+        "outbound_seat_number": "",
+        "return_flight_selection": "",
+        "return_seat_number": "",
+        "hotel_selection": "",
+        "room_selection": "",
+        "poi": "",
+        "itinerary_start_date": "",
+        "itinerary_end_date": "",
+        "itinerary_datetime": ""
+      },
+      "app_name": "voyager_travel_agent",
+      "user_id": "user"
+    }
+  },
+  {
+    "name": "travel_html_designer_test",
+    "data": [
+      {
+        "query": "suggest me some tourist places in chennai",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "trip_advisor_agent"
+            }
+          },
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "tourist places in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Chennai offers a diverse range of attractions! You could visit Marina Beach, Fort St. George, Kapaleeshwarar Temple, Government Museum Chennai, and San Thome Basilica.\n\nAre any of these places particularly interesting to you? Or would you like me to suggest activities around Chennai?\n"
+      },
+      {
+        "query": "yes please suggest few activities around chennai ",
+        "expected_tool_use": [
+          {
+            "tool_name": "explorer_agent",
+            "tool_input": {
+              "request": "activities around Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "In Chennai, you could visit Marina Beach for sunrise views and local food, explore Fort St. George to see British colonial architecture, visit Government Museum Chennai, visit Kapaleeshwarar Temple, and visit San Thome Basilica\n\nAre any of these places particularly interesting to you?\n"
+      },
+      {
+        "query": "no create a 3 days weekend itinerary covering this places",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {
+              "agent_name": "planning_agent"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "trip_advisor_agent",
+            "text": "I am designed to provide destination and activity suggestions, and not designed to create a full itinerary. I can transfer you to the planning agent who can help you with that.\n"
+          }
+        ],
+        "reference": "Okay, I can help you create a 3-day weekend itinerary covering Marina Beach, Fort St. George, Government Museum Chennai, Kapaleeshwarar Temple, and San Thome Basilica.\n\nFirst, I need to know the start date of your trip. Also, where are you traveling from?\n"
+      },
+      {
+        "query": "start date is august 15th and i am travelling from coimbatore",
+        "expected_tool_use": [
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "origin",
+              "value": "Coimbatore"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "destination",
+              "value": "Chennai"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "start_date",
+              "value": "2025-08-15"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "2025-08-17",
+              "key": "end_date"
+            }
+          },
+          {
+            "tool_name": "flight_agent",
+            "tool_input": {
+              "request": "Find flights from Coimbatore to Chennai on 2025-08-15 and return on 2025-08-17"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, I will create a 3-day itinerary starting August 15th, 2025, for a trip from Coimbatore to Chennai, covering the places you mentioned: Marina Beach, Fort St. George, Government Museum Chennai, Kapaleeshwarar Temple, and San Thome Basilica.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Since it's a 3-day trip starting on August 15th, 2025, the end date would be August 17th, 2025.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now that I have the origin, destination, start date, and end date, I can start planning the flights and hotels.\n\n"
+          }
+        ],
+        "reference": "Okay, I have a few flight options for you.\n\n**Outbound (August 15th):**\n\n*   **IndiGo 6E-7697:** Coimbatore (CJB) 06:20 AM to Chennai (MAA) 07:35 AM, Price: $45\n*   **IndiGo 6E-7144:** Coimbatore (CJB) 18:40 PM to Chennai (MAA) 19:55 PM, Price: $45\n\n**Return (August 17th):**\n\n*   **IndiGo 6E-7144:** Chennai (MAA) 20:40 PM to Coimbatore (CJB) 21:55 PM, Price: $45\n*   **Air India AI-544:** Chennai (MAA) 19:15 PM to Coimbatore (CJB) 20:25 PM, Price: $52\n\nSince you have a seat preference for a window seat and a food preference for non-vegetarian, I will choose the IndiGo flights for both outbound and return. I will select the morning flight on August 15th and the evening flight on August 17th.\n\nDo you want to proceed with these flights?\n"
+      },
+      {
+        "query": "yes please proceed with these flights ",
+        "expected_tool_use": [
+          {
+            "tool_name": "flight_agent",
+            "tool_input": {
+              "request": "Select seat for IndiGo 6E-7697, departing from Coimbatore (CJB) at 06:20 AM on 2025-08-15"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "outbound_flight_selection",
+              "value": "{\"flight_number\": \"6E-7697\", \"departure\": {\"city_name\": \"Coimbatore\", \"airport_code\": \"CJB\", \"timestamp\": \"2025-08-15T06:20:00\"}, \"arrival\": {\"city_name\": \"Chennai\", \"airport_code\": \"MAA\", \"timestamp\": \"2025-08-15T07:35:00\"}, \"airlines\": [\"IndiGo\"], \"airline_logo\": \"/images/airplane.png\", \"price_in_usd\": 45, \"number_of_stops\": 0}"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "window",
+              "key": "outbound_seat_number"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "value": "{\"flight_number\": \"6E-7144\", \"departure\": {\"city_name\": \"Chennai\", \"airport_code\": \"MAA\", \"timestamp\": \"2025-08-17T20:40:00\"}, \"arrival\": {\"city_name\": \"Coimbatore\", \"airport_code\": \"CJB\", \"timestamp\": \"2025-08-17T21:55:00\"}, \"airlines\": [\"IndiGo\"], \"airline_logo\": \"/images/airplane.png\", \"price_in_usd\": 45, \"number_of_stops\": 0}",
+              "key": "return_flight_selection"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "return_seat_number",
+              "value": "window"
+            }
+          },
+          {
+            "tool_name": "hotel_agent",
+            "tool_input": {
+              "request": "Find hotels in Chennai"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, let's proceed with the IndiGo flights. First, I will select the outbound flight and then the seat.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "I am unable to select seats directly. However, considering your preference for a window seat, I will make a note to choose a window seat when booking the flight.\n\nI will save the outbound flight information.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now, let's save the return flight information.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "Now that we have the flights, let's find a hotel in Chennai.\n\n"
+          }
+        ],
+        "reference": "Here are a few hotel options in Chennai:\n\n*   **The Leela Palace Chennai:** Price: 12000\n*   **Taj Coromandel:** Price: 9500\n*   **ITC Grand Chola, a Luxury Collection Hotel, Chennai:** Price: 11000\n*   **Hyatt Regency Chennai:** Price: 7500\n\nGiven the activities you're interested in and considering a balance of luxury and value, I recommend the Taj Coromandel. It's centrally located and offers excellent service.\n\nDo you want to proceed with this hotel?\n"
+      },
+      {
+        "query": "yes proceed with this hotel",
+        "expected_tool_use": [
+          {
+            "tool_name": "hotel_agent",
+            "tool_input": {
+              "request": "Choose a room at Taj Coromandel"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "hotel_selection",
+              "value": "{\"address\": \"37, Mahatma Gandhi Rd, Nungambakkam, Chennai, Tamil Nadu 600034, India\", \"check_in_time\": \"14:00\", \"check_out_time\": \"12:00\", \"name\": \"Taj Coromandel\", \"price\": 9500, \"thumbnail\": \"/src/images/taj.png\"}"
+            }
+          },
+          {
+            "tool_name": "memorize",
+            "tool_input": {
+              "key": "room_selection",
+              "value": "standard room"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Okay, let's proceed with the Taj Coromandel. Now, let's choose a room.\n\n"
+          },
+          {
+            "author": "planning_agent",
+            "text": "I am unable to select a specific room type. I will assume a standard room for the itinerary.\n\n"
+          }
+        ],
+        "reference": "Now that we have the flights and hotel, I can create a draft itinerary for your 3-day weekend trip to Chennai.\n\n**Day 1 (August 15th):**\n\n*   **Morning:** Depart from Coimbatore (CJB) at 06:20 AM, arrive in Chennai (MAA) at 07:35 AM (IndiGo 6E-7697).\n*   **Morning:** Travel from Chennai Airport to Taj Coromandel (approx. 30-45 minutes).\n*   **Afternoon:** Check in to Taj Coromandel (check-in time is 2:00 PM).\n*   **Afternoon:** Visit Fort St. George (historical fort and museum).\n*   **Evening:** Relax and have dinner at the hotel or a nearby restaurant.\n\n**Day 2 (August 16th):**\n\n*   **Morning:** Visit Kapaleeshwarar Temple (ancient Hindu temple).\n*   **Afternoon:** Visit Government Museum Chennai (archaeological finds and exhibits).\n*   **Evening:** Visit Marina Beach (enjoy the sunset and local food stalls).\n\n**Day 3 (August 17th):**\n\n*   **Morning:** Visit San Thome Basilica (Roman Catholic basilica).\n*   **Afternoon:** Shopping or explore other local attractions.\n*   **Evening:** Travel to Chennai Airport for your return flight.\n*   **Evening:** Depart from Chennai (MAA) at 20:40 PM, arrive in Coimbatore (CJB) at 21:55 PM (IndiGo 6E-7144).\n\nHow does this itinerary look to you?\n"
+      },
+      {
+        "query": "Yes this itinerary looks good",
+        "expected_tool_use": [
+          {
+            "tool_name": "itinerary_agent",
+            "tool_input": {
+              "request": "Create itinerary with flights: outbound_flight_selection and return_flight_selection, hotel: hotel_selection, activities: Marina Beach, Fort St. George, Government Museum Chennai, Kapaleeshwarar Temple, and San Thome Basilica"
+            }
+          },
+          {
+            "tool_name": "save_itinerary_artifact",
+            "tool_input": {
+              "itinerary": {
+                "destination": "Chennai",
+                "end_date": "2025-08-17",
+                "trip_name": "Chennai Trip",
+                "days": [
+                  {
+                    "date": "2025-08-15",
+                    "day_number": 1,
+                    "events": [
+                      {
+                        "price": "",
+                        "start_time": "04:30",
+                        "end_time": "05:30",
+                        "description": "Leaving home in Coimbatore",
+                        "booking_required": false,
+                        "address": "",
+                        "event_type": "home"
+                      },
+                      {
+                        "seat_number": "window",
+                        "arrival_time": "07:35",
+                        "flight_number": "6E-7697",
+                        "departure_time": "06:20",
+                        "description": "Flight from Coimbatore to Chennai",
+                        "booking_id": "",
+                        "booking_required": true,
+                        "arrival_airport": "MAA",
+                        "departure_airport": "CJB",
+                        "event_type": "flight",
+                        "price": "45",
+                        "boarding_time": "05:45"
+                      },
+                      {
+                        "booking_id": "",
+                        "price": "9500",
+                        "description": "Taj Coromandel Check-in",
+                        "check_in_time": "14:00",
+                        "check_out_time": "12:00",
+                        "address": "37, Mahatma Gandhi Rd, Nungambakkam, Chennai, Tamil Nadu 600034, India",
+                        "room_selection": "standard room",
+                        "booking_required": true,
+                        "event_type": "hotel"
+                      },
+                      {
+                        "description": "Visit Marina Beach",
+                        "event_type": "visit",
+                        "price": "",
+                        "end_time": "19:00",
+                        "booking_required": false,
+                        "address": "Marina Beach, Chennai",
+                        "start_time": "16:00"
+                      },
+                      {
+                        "event_type": "visit",
+                        "address": "Local restaurant near the hotel",
+                        "booking_required": false,
+                        "description": "Dinner",
+                        "start_time": "20:00",
+                        "end_time": "21:00",
+                        "price": ""
+                      }
+                    ]
+                  },
+                  {
+                    "date": "2025-08-16",
+                    "day_number": 2,
+                    "events": [
+                      {
+                        "price": "",
+                        "end_time": "12:00",
+                        "booking_required": false,
+                        "address": "Rajaji Salai, Near Secretariat, Chennai, Tamil Nadu 600009, India",
+                        "start_time": "09:00",
+                        "description": "Visit Fort St. George",
+                        "event_type": "visit"
+                      },
+                      {
+                        "start_time": "14:00",
+                        "end_time": "17:00",
+                        "booking_required": false,
+                        "event_type": "visit",
+                        "address": "Pantheon Rd, Egmore, Chennai, Tamil Nadu 600008, India",
+                        "description": "Visit Government Museum Chennai",
+                        "price": ""
+                      },
+                      {
+                        "end_time": "21:00",
+                        "event_type": "visit",
+                        "price": "",
+                        "start_time": "20:00",
+                        "address": "Local restaurant in Chennai",
+                        "description": "Dinner",
+                        "booking_required": false
+                      }
+                    ]
+                  },
+                  {
+                    "date": "2025-08-17",
+                    "events": [
+                      {
+                        "start_time": "09:00",
+                        "event_type": "visit",
+                        "end_time": "11:00",
+                        "price": "",
+                        "booking_required": false,
+                        "address": "234, Ramakrishna Mutt Rd, Vinayaka Nagar Colony, Mylapore, Chennai, Tamil Nadu 600004, India",
+                        "description": "Visit Kapaleeshwarar Temple"
+                      },
+                      {
+                        "booking_required": false,
+                        "start_time": "11:30",
+                        "description": "Visit San Thome Basilica",
+                        "address": "38, Santhome High Rd, Santhome, Chennai, Tamil Nadu 600004, India",
+                        "event_type": "visit",
+                        "price": "",
+                        "end_time": "13:00"
+                      },
+                      {
+                        "address": "37, Mahatma Gandhi Rd, Nungambakkam, Chennai, Tamil Nadu 600034, India",
+                        "check_in_time": "14:00",
+                        "price": "",
+                        "booking_required": false,
+                        "booking_id": "",
+                        "event_type": "hotel",
+                        "check_out_time": "12:00",
+                        "room_selection": "standard room",
+                        "description": "Taj Coromandel Check-out"
+                      },
+                      {
+                        "seat_number": "window",
+                        "event_type": "flight",
+                        "booking_required": true,
+                        "booking_id": "",
+                        "flight_number": "6E-7144",
+                        "arrival_airport": "CJB",
+                        "price": "45",
+                        "departure_airport": "MAA",
+                        "boarding_time": "20:00",
+                        "departure_time": "20:40",
+                        "arrival_time": "21:55",
+                        "description": "Return Flight from Chennai to Coimbatore"
+                      },
+                      {
+                        "price": "",
+                        "booking_required": false,
+                        "description": "Arriving home in Coimbatore",
+                        "event_type": "home",
+                        "address": "",
+                        "start_time": "22:30",
+                        "end_time": "23:00"
+                      }
+                    ],
+                    "day_number": 3
+                  }
+                ],
+                "start_date": "2025-08-15",
+                "origin": "Coimbatore"
+              }
+            }
+          },
+          {
+            "tool_name": "travel_guide_designer_agent",
+            "tool_input": {
+              "request": "Create a travel guide in HTML using the generated itinerary"
+            }
+          },
+          {
+            "tool_name": "create_travel_website",
+            "tool_input": {
+              "itinerary_design_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>My Awesome Trip</title>\n    <style>\n        body {\n            font-family: 'Arial', sans-serif;\n            line-height: 1.6;\n            margin: 0;\n            padding: 0;\n            background-color: #f4f4f8;\n            color: #333;\n        }\n        .container {\n            width: 80%;\n            margin: 20px auto;\n            background: #fff;\n            padding: 30px;\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n            border-radius: 8px;\n        }\n        h1 {\n            color: #2c3e50;\n            text-align: center;\n            margin-bottom: 30px;\n            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);\n        }\n        h2 {\n            color: #3498db;\n            border-bottom: 2px solid #3498db;\n            padding-bottom: 5px;\n            margin-top: 25px;\n        }\n        ul {\n            list-style: none;\n            padding: 0;\n        }\n        li {\n            margin-bottom: 20px;\n            padding: 15px;\n            background: #ecf0f1;\n            border-radius: 6px;\n            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);\n        }\n        li:hover {\n            background-color: #d5dbdb;\n        }\n        .event-time {\n            font-weight: bold;\n            color: #e74c3c;\n        }\n        .event-location {\n            font-style: italic;\n            color: #777;\n        }\n        .event-type {\n            color: #9b59b6;\n        }\n\n        /* Emoji and Icons */\n        .flight-icon::before {\n            content: \"\ud83d\udeeb \";\n        }\n        .hotel-icon::before {\n            content: \"\ud83c\udfe8 \";\n        }\n        .visit-icon::before {\n            content: \"\ud83d\uddfa\ufe0f \";\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <h1>My Awesome Trip</h1>\n        \n        <h2>Day 1</h2>\n        <ul>\n            <li>\n                <span class=\"event-time\">9:00 AM</span> <span class=\"flight-icon\"></span> Flight to Adventure City\n                <p>Departure from home airport to our destination. Enjoy the inflight entertainment!</p>\n            </li>\n            <li>\n                <span class=\"event-time\">1:00 PM</span> <span class=\"hotel-icon\"></span> Check-in to Grand Vista Hotel\n                <p>Relax and unwind after your flight. Get ready for an exciting evening!</p>\n            </li>\n            <li>\n                <span class=\"event-time\">7:00 PM</span> <span class=\"visit-icon\"></span> Evening stroll and dinner\n                <p>Explore the local cuisine and enjoy the vibrant city nightlife.</p>\n            </li>\n        </ul>\n\n        <h2>Day 2</h2>\n        <ul>\n            <li>\n                <span class=\"event-time\">10:00 AM</span> <span class=\"visit-icon\"></span> Visit Landmark Museum\n                <p>Explore historical artifacts and learn about the rich culture of the city.</p>\n            </li>\n            <li>\n                <span class=\"event-time\">1:00 PM</span> Lunch at Central Park Cafe\n                <p>Enjoy a delightful lunch in the heart of the city.</p>\n            </li>\n            <li>\n                <span class=\"event-time\">3:00 PM</span> Shopping at Fashion Avenue\n                <p>Indulge in some retail therapy at the trendiest shops in town.</p>\n            </li>\n        </ul>\n\n    </div>\n</body>\n</html>",
+              "path": "my_trip.html"
+            }
+          }
+        ],
+        "expected_intermediate_agent_responses": [
+          {
+            "author": "planning_agent",
+            "text": "Great! Now that you've approved the itinerary, I'll finalize it and save it.\n\n"
+          }
+        ],
+        "reference": "I have now generated a detailed itinerary for your trip to Chennai, including flights, hotel, and planned activities. I have also saved the itinerary as an artifact and created a travel guide in HTML format.\n\nWould you like me to proceed with booking the flights and hotel for you?\n"
+      }
+    ],
+    "initial_session": {
+      "state": {
+        "user_profile": "",
+        "_time": "",
+        "origin": "",
+        "destination": "",
+        "start_date": "",
+        "end_date": "",
+        "itinerary": "",
+        "outbound_flight_selection": "",
+        "outbound_seat_number": "",
+        "return_flight_selection": "",
+        "return_seat_number": "",
+        "hotel_selection": "",
+        "room_selection": "",
+        "poi": "",
+        "itinerary_start_date": "",
+        "itinerary_end_date": "",
+        "itinerary_datetime": ""
+      },
+      "app_name": "voyager_travel_agent",
+      "user_id": "user"
+    }
+  }
+]

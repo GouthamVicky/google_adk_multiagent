@@ -172,3 +172,12 @@ Instead of interacting with the concierge one turn at time. Try giving it the en
 ```bash
 Plan a trip to Japan on this year august month. Pick any flights and any seats; also Any hotels and room type. Make sure you pick seats for both flights. Go ahead and act on my behalf without my input, until you have selected everything, confirm with me before generating an itinerary.
 ```
+
+
+## Walkthrough Video
+
+Here is a walkthrough video of the project:
+
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/your-thumbnail-id-here.png)](https://www.loom.com/share/dce4778409b44eb6a2b339fe5aaadc43?sid=9c25b1dc-6a2e-4b92-bea5-d4654605dcc7)
+
+Click the image above to watch the video.

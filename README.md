@@ -179,3 +179,14 @@ Plan a trip to Japan on this year august month. Pick any flights and any seats; 
 Here is a walkthrough video of the project:
 
 [[Watch the video]](https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/4dc8b4153925131.633efa9b268a9.jpg)(https://www.loom.com/share/dce4778409b44eb6a2b339fe5aaadc43?sid=9c25b1dc-6a2e-4b92-bea5-d4654605dcc7)
+
+
+## Future Enhancements
+1. Integration of Model Context Protocol (MCP) Server Support
+We aim to enhance our system by integrating support for the Model Context Protocol (MCP). MCP is an open standard that enables secure, two-way connections between AI models and external data sources or tools. By implementing MCP server support, our agents will be able to dynamically discover and utilize various tools and resources, facilitating more efficient and context-aware interactions. 
+Home
+​
+
+2. Development of an Agent-to-Agent (A2A) Communication Protocol
+To enable seamless collaboration among multiple agents, we plan to develop an Agent-to-Agent (A2A) communication protocol. This protocol will allow agents to discover each other's capabilities, exchange information, and collaborate on tasks, regardless of their underlying frameworks or vendors. By establishing a standardized communication framework, we aim to enhance interoperability and enable more complex multi-agent workflows. 
+Google Developers Blog
